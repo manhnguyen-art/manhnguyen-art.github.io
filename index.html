@@ -1,1 +1,27 @@
-https://michaelnguyen.github.io
+
+---
+layout: default
+title: Home
+---
+<section class="hero">
+  <div class="hero__text">
+    <h1>{{ site.title }}</h1>
+    <p class="muted">{{ site.description }}</p>
+  </div>
+</section>
+
+<section class="posts">
+  <h2>Latest Posts</h2>
+  <div class="cards">
+    {%- for post in site.posts limit:12 -%}
+    <article class="card">
+      <a class="card__link" href="{{ post.url | relative_url }}">
+        <h3 class="card__title">{{ post.title }}</h3>
+        <p class="card__meta">{{ post.date | date: "%b %d, %Y" }} • {{ post.category | default: "note" }}</p>
+        <p class="card__excerpt">{{ post.excerpt | strip_html | truncate: 160 }}</p>
+      </a>
+    </article>
+    {%- endfor -%}
+  </div>
+  <p class="more"><a href="{{ '/pages/archive/' | relative_url }}">View all →</a></p>
+</section>

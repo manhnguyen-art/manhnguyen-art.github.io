@@ -1,0 +1,37 @@
+
+title: Michael Nguyen — Notes in Medicine
+description: Academic blog — genomics, diagnostics, pharmacology. Clear, rigorous, personal.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. https://example.com
+
+# Build settings
+markdown: kramdown
+theme: null
+permalink: /:categories/:year/:month/:day/:title/
+
+# Collections / pages
+collections:
+  posts:
+    output: true
+
+# Social
+author:
+  name: Michael Nguyen
+  email: your.email@example.com
+  twitter: ""
+  github: ""
+  scholar: ""
+
+# RSS
+plugins: []  # Keep empty to ensure GitHub Pages compatibility without extra plugins
+
+# Navigation
+nav:
+  - name: Home
+    url: /
+  - name: About
+    url: /pages/about/
+  - name: Research
+    url: /pages/research/
+  - name: Archive
+    url: /pages/archive/
