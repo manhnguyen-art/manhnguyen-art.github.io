@@ -23,8 +23,11 @@ author:
   scholar: ""
 
 # RSS
-plugins: []  # Keep empty to ensure GitHub Pages compatibility without extra plugins
-
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-optional-front-matter
+  - jekyll-default-layout
 # Navigation
 nav:
   - name: Home
