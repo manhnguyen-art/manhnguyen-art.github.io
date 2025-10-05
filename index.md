@@ -1,14 +1,7 @@
----
-layout: default
-title: Home
----
 
-<section class="hero">
-  <div class="hero__text">
     <h1>Chia sẻ kiến thức thường nhật</h1>
     <p class="muted">Góc nhìn y khoa hiện đại kết hợp với chủ nghĩa kinh nghiệm truyền thống trong điều trị</p>
-  </div>
-</section>
+
 
 <section class="_posts">
   <h2>Latest Posts</h2>
