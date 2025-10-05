@@ -46,3 +46,20 @@ a:hover{text-decoration:underline}
   .wrap{padding:18px}
   .cards{grid-template-columns:1fr}
 }
+
+/* === Language switch === */
+:root { --btnborder: #2a2d36; }
+.lang-vi .en { display: none !important; }
+.lang-en .vi { display: none !important; }
+
+.lang-switch {
+  border: 1px solid var(--btnborder);
+  background: #13151c;
+  color: inherit;
+  padding: 6px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.lang-switch:hover { background: #191c24; }
+
