@@ -3,10 +3,10 @@
     <p class="muted">Góc nhìn y khoa hiện đại kết hợp với chủ nghĩa kinh nghiệm truyền thống trong điều trị</p>
 </section>
 
-<section class="_posts">
+<section class="posts">
   <h2>Latest Posts</h2>
   <div class="cards">
-    {%- for post in site.posts limit:12 -%}
+    %- for post in site._posts limit:12 -%
     <article class="card">
       <a class="card__link" href="{{ post.url | relative_url }}">
         <h3 class="card__title">{{ post.title }}</h3>
