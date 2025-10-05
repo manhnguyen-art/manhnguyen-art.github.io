@@ -10,7 +10,7 @@ title: Home
   </div>
 </section>
 
-<section class="posts">
+<section class="_posts">
   <h2>Latest Posts</h2>
   <div class="cards">
     {%- for post in site.posts limit:12 -%}
