@@ -1,9 +1,13 @@
-
 ---
 layout: post
-title: Why a Static Medical Blog?
+title: "Why Static Blog"
 date: 2025-10-05 09:00:00 +0700
-category: meta
+categories: [meta, github]
+tags: [jekyll, github-pages, blog]
+permalink: /posts/why-static-blog/
+author: Michael Nguyen
+description: "Explaining why a static blog offers full control and transparency."
+lang: en
 ---
 A static blog (Jekyll on GitHub Pages) is ideal for medical notes: version control, citations, and simple deploy. No databases, no server management, minimal attack surface.
 
