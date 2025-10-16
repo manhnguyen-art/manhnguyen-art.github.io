@@ -6,7 +6,7 @@ url: "" # the base hostname & protocol for your site, e.g. https://example.com
 
 # Build settings
 markdown: kramdown
-theme: Architect
+remote_theme: pages-themes/architect@v0.2.0
 permalink: /:categories/:year/:month/:day/:title/
 
 # Collections / pages
@@ -28,6 +28,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-optional-front-matter
   - jekyll-default-layout
+  - jekyll-remote-theme
 # Navigation
 nav:
   - name: Home
