@@ -1,8 +1,0 @@
-body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; }
-.wrapper { max-width: 880px; margin: 0 auto; padding: 1rem; }
-.site-header, .site-footer { background: #f7f7f7; border-top: 4px solid #222; }
-.site-nav .page-link { margin-right: 1rem; text-decoration: none; }
-.lang-switch { float: right; font-weight: 600; }
-.post-title { margin-bottom: .2rem; }
-.post-meta { color: #666; margin-top: 0; }
-code, pre { background: #f1f1f1; }
