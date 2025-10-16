@@ -11,8 +11,14 @@ permalink: /:categories/:year/:title/
 
 # Collections / pages
 collections:
-  posts:
+  en:
     output: true
+    permalink: /en/:categories/:year/:month/:day/:title/
+    folder: en/posts
+  vi:
+    output: true
+    permalink: /vi/:categories/:year/:month/:day/:title/
+    folder: vi/posts
 
 # Social
 author:
@@ -39,3 +45,16 @@ nav:
     url: /pages/research/
   - name: Archive
     url: /pages/archive/
+
+defaults:
+  - scope: {path: "en/posts"}
+    values: {layout: post, lang: en}
+  - scope: {path: "vi/posts"}
+    values: {layout: post, lang: vi}
+  - scope: {path: "pages/en"}
+    values: {layout: default, lang: en}
+  - scope: {path: "pages/vi"}
+    values: {layout: default, lang: vi}
+
+paginate: 10
+paginate_path: "/:num/"
