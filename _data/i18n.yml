@@ -2,9 +2,12 @@ nav:
   home:
     vi: "Trang chủ"
     en: "Home"
-  archives:
-    vi: "Lưu trữ"
-    en: "Archives"
+  about:
+    vi: "Giới thiệu"
+    en: "About"
   research:
     vi: "Nghiên cứu"
     en: "Research"
+  archive:
+    vi: "Lưu trữ"
+    en: "Archive"
