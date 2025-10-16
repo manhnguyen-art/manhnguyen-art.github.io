@@ -9,16 +9,27 @@
       <a href="{{ item.url | relative_url }}">{{ item.name }}</a>
       {% endfor %}
     </nav>
-    <nav class="site-nav">
-  <!-- menu khác -->
-  {% if page.alt_url %}
-    <a class="lang-switch" href="{{ page.alt_url | relative_url }}">
-      {% if page.lang == "vi" %}English{% else %}Tiếng Việt{% endif %}
-    </a>
-  {% else %}
-    <!-- fallback: đưa về /en/ hoặc /vi/ gốc -->
-    <a class="lang-switch" href="{% if page.lang == 'vi' %}/en/{% else %}/vi/{% endif %}">EN / VI</a>
-  {% endif %}
+    <nav>
+      <a href="{{ '/' | relative_url }}">{{ site.data.i18n.nav.home[page.lang] }}</a>
+      <a href="{{ page.lang == 'vi' ? '/vi/archives/' : '/en/archives/' | relative_url }}">
+        {{ site.data.i18n.nav.archives[page.lang] }}
+      </a>
+      <a href="{{ page.lang == 'vi' ? '/vi/research/' : '/en/research/' | relative_url }}">
+        {{ site.data.i18n.nav.research[page.lang] }}
+      </a>
+    
+      {% comment %} Nút chuyển ngôn ngữ: dùng alt_url nếu có, else rơi về root bên kia {% endcomment %}
+      {% assign other = page.lang == 'vi' ? 'en' : 'vi' %}
+      {% if page.alt_url %}
+        <a class="lang-switch" href="{{ page.alt_url | relative_url }}">
+          {{ other | upcase }}
+        </a>
+      {% else %}
+        <a class="lang-switch" href="{{ '/' | append: other | append: '/' | relative_url }}">
+          {{ other | upcase }}
+        </a>
+      {% endif %}
 </nav>
+
   </div>
 </header>
