@@ -37,14 +37,24 @@ plugins:
   - jekyll-remote-theme
 # Navigation
 nav:
-  - name: Home
-    url: /
-  - name: About
-    url: /pages/about/
-  - name: Research
-    url: /pages/research/
-  - name: Archive
-    url: /pages/archive/
+  vi:
+    - name: Trang chủ
+      url: /vi/
+    - name: Giới thiệu
+      url: /vi/pages/about/
+    - name: Nghiên cứu
+      url: /vi/pages/research/
+    - name: Lưu trữ
+      url: /vi/pages/archive/
+  en:
+    - name: Home
+      url: /en/
+    - name: About
+      url: /en/pages/about/
+    - name: Research
+      url: /en/pages/research/
+    - name: Archive
+      url: /en/pages/archive/
 
 defaults:
   - scope: {path: "en/posts"}
