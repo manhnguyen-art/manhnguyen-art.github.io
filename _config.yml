@@ -7,7 +7,7 @@ url: "" # the base hostname & protocol for your site, e.g. https://example.com
 # Build settings
 markdown: kramdown
 remote_theme: pages-themes/architect@v0.2.0
-permalink: /:categories/:year/:month/:day/:title/
+permalink: /:categories/:year/:title/
 
 # Collections / pages
 collections:
