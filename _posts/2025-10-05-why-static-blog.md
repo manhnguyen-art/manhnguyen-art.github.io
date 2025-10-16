@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Why Static Blog"
+title: "Why Static Blog WHAT DA FA"
 date: 2025-10-05 09:00:00 +0700
 categories: [meta, github]
 tags: [jekyll, github-pages, blog]
