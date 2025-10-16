@@ -6,7 +6,7 @@
 <section class="posts">
   <h2>Latest Posts</h2>
   <div class="cards">
-    {%- for post in site.en limit:12 -%}
+    {%- for post in site.vi limit:12 -%}
     <article class="card">
       <a class="card__link" href="{{ post.url | relative_url }}">
         <h3 class="card__title">{{ post.title }}</h3>
