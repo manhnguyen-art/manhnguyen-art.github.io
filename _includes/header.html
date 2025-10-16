@@ -8,8 +8,17 @@
       {% for item in site.nav %}
       <a href="{{ item.url | relative_url }}">{{ item.name }}</a>
       {% endfor %}
-      <button id="lang-toggle" class="lang-switch">VI / EN</button>
-
     </nav>
+    <nav class="site-nav">
+  <!-- menu khác -->
+  {% if page.alt_url %}
+    <a class="lang-switch" href="{{ page.alt_url | relative_url }}">
+      {% if page.lang == "vi" %}English{% else %}Tiếng Việt{% endif %}
+    </a>
+  {% else %}
+    <!-- fallback: đưa về /en/ hoặc /vi/ gốc -->
+    <a class="lang-switch" href="{% if page.lang == 'vi' %}/en/{% else %}/vi/{% endif %}">EN / VI</a>
+  {% endif %}
+</nav>
   </div>
 </header>
