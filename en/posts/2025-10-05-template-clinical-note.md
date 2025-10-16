@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: Template — Clinical Note with References
