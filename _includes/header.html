@@ -30,6 +30,10 @@
         </a>
       {% endif %}
 </nav>
-
+{% if page.lang and page.alt_url %}
+<link rel="alternate" hreflang="{{ page.lang }}" href="{{ page.url | absolute_url }}">
+<link rel="alternate" hreflang="{{ page.lang == 'vi' ? 'en' : 'vi' }}" href="{{ page.alt_url | absolute_url }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+{% endif %}
   </div>
 </header>
