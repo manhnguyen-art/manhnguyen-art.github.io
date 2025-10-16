@@ -1,70 +1,52 @@
+title: "Michael — Bilingual Jekyll"
+url: ""   # set to your site URL later, e.g., https://<username>.github.io
+baseurl: ""
 
-title: Michael Nguyen — Notes in Medicine
-description: Academic blog — genomics, diagnostics, pharmacology. Clear, rigorous, personal.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. https://example.com
-
-# Build settings
+theme: minima
 markdown: kramdown
-remote_theme: pages-themes/architect@v0.2.0
-permalink: /:categories/:year/:title/
-
-# Collections / pages
-collections:
-  en:
-    output: true
-    permalink: /en/:categories/:year/:month/:day/:title/
-    folder: en/posts
-  vi:
-    output: true
-    permalink: /vi/:categories/:year/:month/:day/:title/
-    folder: vi/posts
-
-# Social
-author:
-  name: Michael Nguyen
-  email: your.email@example.com
-  twitter: ""
-  github: ""
-  scholar: ""
-
-# RSS
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-optional-front-matter
-  - jekyll-default-layout
-  - jekyll-remote-theme
-# Navigation
+
+# Bilingual collections for posts
+collections:
+  vi:
+    output: true
+    folder: vi/posts
+    permalink: /vi/:categories/:year/:month/:day/:title/
+  en:
+    output: true
+    folder: en/posts
+    permalink: /en/:categories/:year/:month/:day/:title/
+
+# Defaults by path to auto-assign layout & lang
+defaults:
+  - scope: { path: "vi/posts" }
+    values: { layout: post, lang: vi }
+  - scope: { path: "en/posts" }
+    values: { layout: post, lang: en }
+  - scope: { path: "pages/vi" }
+    values: { layout: default, lang: vi }
+  - scope: { path: "pages/en" }
+    values: { layout: default, lang: en }
+
+# Bilingual navigation using clean permalinks
 nav:
   vi:
     - name: Trang chủ
       url: /vi/
     - name: Giới thiệu
-      url: /vi/pages/about/
+      url: /vi/about/
     - name: Nghiên cứu
-      url: /vi/pages/research/
+      url: /vi/research/
     - name: Lưu trữ
-      url: /vi/pages/archive/
+      url: /vi/archive/
   en:
     - name: Home
       url: /en/
     - name: About
-      url: /en/pages/about/
+      url: /en/about/
     - name: Research
-      url: /en/pages/research/
+      url: /en/research/
     - name: Archive
-      url: /en/pages/archive/
-
-defaults:
-  - scope: {path: "en/posts"}
-    values: {layout: post, lang: en}
-  - scope: {path: "vi/posts"}
-    values: {layout: post, lang: vi}
-  - scope: {path: "pages/en"}
-    values: {layout: default, lang: en}
-  - scope: {path: "pages/vi"}
-    values: {layout: default, lang: vi}
-
-paginate: 10
-paginate_path: "/:num/"
+      url: /en/archive/

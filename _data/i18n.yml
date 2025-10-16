@@ -1,13 +1,7 @@
 nav:
-  home:
-    vi: "Trang chủ"
-    en: "Home"
-  about:
-    vi: "Giới thiệu"
-    en: "About"
-  research:
-    vi: "Nghiên cứu"
-    en: "Research"
-  archive:
-    vi: "Lưu trữ"
-    en: "Archive"
+  home: { vi: "Trang chủ", en: "Home" }
+  about: { vi: "Giới thiệu", en: "About" }
+  research: { vi: "Nghiên cứu", en: "Research" }
+  archive: { vi: "Lưu trữ", en: "Archive" }
+site:
+  title_suffix: { vi: " — Trang chính", en: " — Site" }

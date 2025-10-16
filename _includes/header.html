@@ -1,39 +1,18 @@
-
 <header class="site-header">
-  <div class="wrap nav">
-    <a class="brand" href="{{ '/' | relative_url }}">
-      <span class="dot"></span><span class="brand__text">{{ site.title }}</span>
-    </a>
-    <nav class="menu">
-      {% for item in site.nav %}
-      <a href="{{ item.url | relative_url }}">{{ item.name }}</a>
-      {% endfor %}
-    </nav>
-    <nav>
-      <a href="{{ '/' | relative_url }}">{{ site.data.i18n.nav.home[page.lang] }}</a>
-      <a href="{{ page.lang == 'vi' ? '/vi/archives/' : '/en/archives/' | relative_url }}">
-        {{ site.data.i18n.nav.archives[page.lang] }}
-      </a>
-      <a href="{{ page.lang == 'vi' ? '/vi/research/' : '/en/research/' | relative_url }}">
-        {{ site.data.i18n.nav.research[page.lang] }}
-      </a>
-    
-      {% comment %} Nút chuyển ngôn ngữ: dùng alt_url nếu có, else rơi về root bên kia {% endcomment %}
+  <div class="wrapper">
+    <nav class="site-nav">
+      {% assign current_nav = site.nav[page.lang] %}
+      {% if current_nav %}
+        {% for item in current_nav %}
+          <a class="page-link" href="{{ item.url | relative_url }}">{{ item.name }}</a>
+        {% endfor %}
+      {% endif %}
       {% assign other = page.lang == 'vi' ? 'en' : 'vi' %}
       {% if page.alt_url %}
-        <a class="lang-switch" href="{{ page.alt_url | relative_url }}">
-          {{ other | upcase }}
-        </a>
+        <a class="page-link lang-switch" href="{{ page.alt_url | relative_url }}">{{ other | upcase }}</a>
       {% else %}
-        <a class="lang-switch" href="{{ '/' | append: other | append: '/' | relative_url }}">
-          {{ other | upcase }}
-        </a>
+        <a class="page-link lang-switch" href="{{ '/' | append: other | append: '/' | relative_url }}">{{ other | upcase }}</a>
       {% endif %}
-</nav>
-{% if page.lang and page.alt_url %}
-<link rel="alternate" hreflang="{{ page.lang }}" href="{{ page.url | absolute_url }}">
-<link rel="alternate" hreflang="{{ page.lang == 'vi' ? 'en' : 'vi' }}" href="{{ page.alt_url | absolute_url }}">
-<link rel="canonical" href="{{ page.url | absolute_url }}">
-{% endif %}
+    </nav>
   </div>
 </header>

@@ -1,15 +1,17 @@
 ---
 layout: default
-title: "Archive"
 lang: en
+title: "Archive"
 permalink: /en/archive/
+alt_url: /vi/archive/
 ---
-<section class="page">
-  <h1>Archive</h1>
-  <ul>
-    {% assign posts = site.en | sort: "date" | reverse %}
-    {% for post in site.posts %}
-      <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a> — <span class="muted">{{ post.date | date: "%b %d, %Y" }}</span></li>
-    {% endfor %}
-  </ul>
-</section>
+# Archive (EN)
+
+<ul>
+{% assign posts = site.en | sort: "date" | reverse %}
+{% for post in posts %}
+  <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    <small>— {{ post.date | date: "%Y-%m-%d" }}</small>
+  </li>
+{% endfor %}
+</ul>
