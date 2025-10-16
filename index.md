@@ -1,6 +1,6 @@
 <section class="hero">
-    <h1>Chia sẻ kiến thức thường nhật</h1>
-    <p class="muted">Góc nhìn y khoa hiện đại kết hợp với chủ nghĩa kinh nghiệm truyền thống trong điều trị</p>
+    <h1>Chia sẻ những điều không thể được tìm thấy theo cách thông thường</h1>
+    <p class="muted">Góc nhìn khoa học kết hợp với chủ nghĩa kinh nghiệm</p>
 </section>
 
 <section class="posts">
