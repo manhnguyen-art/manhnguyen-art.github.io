@@ -1,0 +1,52 @@
+title: "Michael — Bilingual Jekyll"
+url: ""   # set to your site URL later, e.g., https://<username>.github.io
+baseurl: ""
+
+theme: minima
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Bilingual collections for posts
+collections:
+  vi:
+    output: true
+    folder: vi/posts
+    permalink: /vi/:categories/:year/:month/:day/:title/
+  en:
+    output: true
+    folder: en/posts
+    permalink: /en/:categories/:year/:month/:day/:title/
+
+# Defaults by path to auto-assign layout & lang
+defaults:
+  - scope: { path: "vi/posts" }
+    values: { layout: post, lang: vi }
+  - scope: { path: "en/posts" }
+    values: { layout: post, lang: en }
+  - scope: { path: "pages/vi" }
+    values: { layout: default, lang: vi }
+  - scope: { path: "pages/en" }
+    values: { layout: default, lang: en }
+
+# Bilingual navigation using clean permalinks
+nav:
+  vi:
+    - name: Trang chủ
+      url: /vi/
+    - name: Giới thiệu
+      url: /vi/about/
+    - name: Nghiên cứu
+      url: /vi/research/
+    - name: Lưu trữ
+      url: /vi/archive/
+  en:
+    - name: Home
+      url: /en/
+    - name: About
+      url: /en/about/
+    - name: Research
+      url: /en/research/
+    - name: Archive
+      url: /en/archive/
